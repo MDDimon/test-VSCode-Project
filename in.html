@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="description" content="">
+	<title>Table Elements - Admin</title>
+	<link href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css" rel="stylesheet">
+	<link href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jqvmap.css?v=16275756370585718435" rel="stylesheet">
+	<link href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/flag-icon.min.css?v=10757425894848348376"
+		rel="stylesheet">
+	<!-- Fullcalendar-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.css" rel="stylesheet">
+	<!-- Materialize-->
+	<link href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/admin-materialize.min.css?v=8850535670742419153"
+		rel="stylesheet">
+	<!-- Material Icons-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script>
+	<meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/17758583/digital_wallets/dialog">
+	<meta name="shopify-checkout-api-token" content="6aacc581eb2b41d74f03c38d3c985dba">
+	<meta id="in-context-paypal-metadata" data-shop-id="17758583" data-venmo-supported="true"
+		data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
+	<link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+	<script id="apple-pay-shop-capabilities"
+		type="application/json">{"shopId":17758583,"countryCode":"US","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/17758583","merchantName":"Materialize Themes","requiredBillingContactFields":["postalAddress","email"],"requiredShippingContactFields":["postalAddress","email"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex","discover","jcb","elo"],"total":{"type":"pending","label":"Materialize Themes","amount":"1.00"}}</script>
+	<script id="shopify-features"
+		type="application/json">{"accessToken":"6aacc581eb2b41d74f03c38d3c985dba","betas":["rich-media-storefront-analytics"],"domain":"themes.materializecss.com","predictiveSearch":true,"shopId":17758583,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js","locale":"en"}</script>
+	<script>(function () { if ("sendBeacon" in navigator && "performance" in window) { var session_token = document.cookie.match(/_shopify_s=([^;]*)/); function handle_abandonment_event(e) { var entries = performance.getEntries().filter(function (entry) { return /monorail-edge.shopifysvc.com/.test(entry.name); }); if (!window.abandonment_tracked && entries.length === 0) { window.abandonment_tracked = true; var currentMs = Date.now(); var navigation_start = performance.timing.navigationStart; var payload = { shop_id: 17758583, url: window.location.href, navigation_start, duration: currentMs - navigation_start, session_token: session_token && session_token.length === 2 ? session_token[1] : "", page_type: "page" }; window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({ schema_id: "online_store_buyer_site_abandonment/1.1", payload: payload, metadata: { event_created_at_ms: currentMs, event_sent_at_ms: currentMs } })); } } window.addEventListener('pagehide', handle_abandonment_event); } }());</script>
+	<script>var Shopify = Shopify || {};
+		Shopify.shop = "materialize-themes.myshopify.com";
+		Shopify.locale = "en";
+		Shopify.currency = { "active": "USD", "rate": "1.0" };
+		Shopify.country = "US";
+		Shopify.theme = { "name": "debut", "id": 133945025, "theme_store_id": 796, "role": "main" };
+		Shopify.theme.handle = "null";
+		Shopify.theme.style = { "id": null, "handle": null };
+		Shopify.cdnHost = "cdn.shopify.com";</script>
+	<script type="module">!function (o) { (o.Shopify = o.Shopify || {}).modules = !0 }(window);</script>
+	<script>!function (o) { function n() { var o = []; function n() { o.push(Array.prototype.slice.apply(arguments)) } return n.q = o, n } var t = o.Shopify = o.Shopify || {}; t.loadFeatures = n(), t.autoloadFeatures = n() }(window);</script>
+	<script>window.ShopifyPay = window.ShopifyPay || {};
+		window.ShopifyPay.apiHost = "shop.app\/pay";</script>
+	<script
+		id="__st">var __st = { "a": 17758583, "offset": -25200, "reqid": "308286aa-a74f-42b7-92b1-361df20156f5", "pageurl": "themes.materializecss.com\/pages\/admin-table-custom-elements", "s": "pages-18650792025", "u": "2f4bd06dac1a", "p": "page", "rtyp": "page", "rid": 18650792025 };</script>
+	<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+	<script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+		window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+		window.ShopifyAnalytics.meta.currency = 'USD';
+		var meta = { "page": { "pageType": "page", "resourceType": "page", "resourceId": 18650792025 }, "page_view_event_id": "0f0b9d254efbaf97b2249bd6f60e422d5fc9acbef9b49f0648f4aa864d7f7197", "cart_event_id": "d72699886e3bb36a9c63452e113e133bce2e8d6f1e4a5fefe92346db3a76a123" };
+		for (var attr in meta) {
+			window.ShopifyAnalytics.meta[attr] = meta[attr];
+		}</script>
+	<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function () {
+
+		};
+	</script>
+	<script class="analytics">(window.gaDevIds = window.gaDevIds || []).push('BwiEti');
+
+
+		(function () {
+			var customDocumentWrite = function (content) {
+				var jquery = null;
+
+				if (window.jQuery) {
+					jquery = window.jQuery;
+				} else if (window.Checkout && window.Checkout.$) {
+					jquery = window.Checkout.$;
+				}
+
+				if (jquery) {
+					jquery('body').append(content);
+				}
+			};
+
+			var hasLoggedConversion = function (token) {
+				if (token) {
+					return document.cookie.indexOf('loggedConversion=' + token) !== -1;
+				}
+				return false;
+			}
+
+			var setCookieIfConversion = function (token) {
+				if (token) {
+					var twoMonthsFromNow = new Date(Date.now());
+					twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+					document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
+				}
+			}
+
+			var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+			if (trekkie.integrations) {
+				return;
+			}
+			trekkie.methods = [
+				'identify',
+				'page',
+				'ready',
+				'track',
+				'trackForm',
+				'trackLink'
+			];
+			trekkie.factory = function (method) {
+				return function () {
+					var args = Array.prototype.slice.call(arguments);
+					args.unshift(method);
+					trekkie.push(args);
+					return trekkie;
+				};
+			};
+			for (var i = 0; i < trekkie.methods.length; i++) {
+				var key = trekkie.methods[i];
+				trekkie[key] = trekkie.factory(key);
+			}
+			trekkie.load = function (config) {
+				trekkie.config = config;
+				var first = document.getElementsByTagName('script')[0];
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.onerror = function (e) {
+					var scriptFallback = document.createElement('script');
+					scriptFallback.type = 'text/javascript';
+					scriptFallback.onerror = function (error) {
+						var Monorail = {
+							produce: function produce(monorailDomain, schemaId, payload) {
+								var currentMs = new Date().getTime();
+								var event = {
+									schema_id: schemaId,
+									payload: payload,
+									metadata: {
+										event_created_at_ms: currentMs,
+										event_sent_at_ms: currentMs
+									}
+								};
+								return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
+							},
+							sendRequest: function sendRequest(endpointUrl, payload) {
+								// Try the sendBeacon API
+								if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
+									var blobData = new window.Blob([payload], {
+										type: 'text/plain'
+									});
+
+									if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+										return true;
+									} // sendBeacon was not successful
+
+								} // XHR beacon   
+
+								var xhr = new XMLHttpRequest();
+
+								try {
+									xhr.open('POST', endpointUrl);
+									xhr.setRequestHeader('Content-Type', 'text/plain');
+									xhr.send(payload);
+								} catch (e) {
+									console.log(e);
+								}
+
+								return false;
+							},
+							isIos12: function isIos12() {
+								return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
+							}
+						};
+						Monorail.produce('monorail-edge.shopifysvc.com',
+							'trekkie_storefront_load_errors/1.1',
+							{
+								shop_id: 17758583,
+								theme_id: 133945025,
+								app_name: "storefront",
+								context_url: window.location.href,
+								source_url: "https://cdn.shopify.com/s/trekkie.storefront.2be6ca24936bccaa8d29f3ae9f16d12e413a733a.min.js"
+							});
+
+					};
+					scriptFallback.async = true;
+					scriptFallback.src = 'https://cdn.shopify.com/s/trekkie.storefront.2be6ca24936bccaa8d29f3ae9f16d12e413a733a.min.js';
+					first.parentNode.insertBefore(scriptFallback, first);
+				};
+				script.async = true;
+				script.src = 'https://cdn.shopify.com/s/trekkie.storefront.2be6ca24936bccaa8d29f3ae9f16d12e413a733a.min.js';
+				first.parentNode.insertBefore(script, first);
+			};
+			trekkie.load(
+				{ "Trekkie": { "appName": "storefront", "development": false, "defaultAttributes": { "shopId": 17758583, "isMerchantRequest": null, "themeId": 133945025, "themeCityHash": "1670185919760860438", "contentLanguage": "en", "currency": "USD" }, "isServerSideCookieWritingEnabled": true }, "Performance": { "navigationTimingApiMeasurementsEnabled": true, "navigationTimingApiMeasurementsSampleRate": 1 }, "Google Analytics": { "trackingId": "UA-56218128-1", "domain": "auto", "siteSpeedSampleRate": "10", "enhancedEcommerce": true, "doubleClick": true, "includeSearch": true }, "Session Attribution": {}, "S2S": { "facebookCapiEnabled": false } }
+			);
+
+			var loaded = false;
+			trekkie.ready(function () {
+				if (loaded) return;
+				loaded = true;
+
+				window.ShopifyAnalytics.lib = window.trekkie;
+
+				ga('require', 'linker');
+				function addListener(element, type, callback) {
+					if (element.addEventListener) {
+						element.addEventListener(type, callback);
+					}
+					else if (element.attachEvent) {
+						element.attachEvent('on' + type, callback);
+					}
+				}
+				function decorate(event) {
+					event = event || window.event;
+					var target = event.target || event.srcElement;
+					if (target && (target.getAttribute('action') || target.getAttribute('href'))) {
+						ga(function (tracker) {
+							var linkerParam = tracker.get('linkerParam');
+							document.cookie = '_shopify_ga=' + linkerParam + '; ' + 'path=/';
+						});
+					}
+				}
+				addListener(window, 'load', function () {
+					for (var i = 0; i < document.forms.length; i++) {
+						var action = document.forms[i].getAttribute('action');
+						if (action && action.indexOf('/cart') >= 0) {
+							addListener(document.forms[i], 'submit', decorate);
+						}
+					}
+					for (var i = 0; i < document.links.length; i++) {
+						var href = document.links[i].getAttribute('href');
+						if (href && href.indexOf('/checkout') >= 0) {
+							addListener(document.links[i], 'click', decorate);
+						}
+					}
+				});
+
+
+				var originalDocumentWrite = document.write;
+				document.write = customDocumentWrite;
+				try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch (error) { };
+				document.write = originalDocumentWrite;
+				(function () {
+					if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
+						return;
+					}
+					window.BOOMR = window.BOOMR || {};
+					window.BOOMR.snippetStart = new Date().getTime();
+					window.BOOMR.snippetExecuted = true;
+					window.BOOMR.snippetVersion = 12;
+					window.BOOMR.application = "storefront-renderer";
+					window.BOOMR.themeName = "Debut";
+					window.BOOMR.themeVersion = "1.0.1";
+					window.BOOMR.shopId = 17758583;
+					window.BOOMR.themeId = 133945025;
+					window.BOOMR.url =
+						"https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js";
+					var where = document.currentScript || document.getElementsByTagName("script")[0];
+					var parentNode = where.parentNode;
+					var promoted = false;
+					var LOADER_TIMEOUT = 3000;
+					function promote() {
+						if (promoted) {
+							return;
+						}
+						var script = document.createElement("script");
+						script.id = "boomr-scr-as";
+						script.src = window.BOOMR.url;
+						script.async = true;
+						parentNode.appendChild(script);
+						promoted = true;
+					}
+					function iframeLoader(wasFallback) {
+						promoted = true;
+						var dom, bootstrap, iframe, iframeStyle;
+						var doc = document;
+						var win = window;
+						window.BOOMR.snippetMethod = wasFallback ? "if" : "i";
+						bootstrap = function (parent, scriptId) {
+							var script = doc.createElement("script");
+							script.id = scriptId || "boomr-if-as";
+							script.src = window.BOOMR.url;
+							BOOMR_lstart = new Date().getTime();
+							parent = parent || doc.body;
+							parent.appendChild(script);
+						};
+						if (!window.addEventListener && window.attachEvent && navigator.userAgent.match(/MSIE [67]./)) {
+							window.BOOMR.snippetMethod = "s";
+							bootstrap(parentNode, "boomr-async");
+							return;
+						}
+						iframe = document.createElement("IFRAME");
+						iframe.src = "about:blank";
+						iframe.title = "";
+						iframe.role = "presentation";
+						iframe.loading = "eager";
+						iframeStyle = (iframe.frameElement || iframe).style;
+						iframeStyle.width = 0;
+						iframeStyle.height = 0;
+						iframeStyle.border = 0;
+						iframeStyle.display = "none";
+						parentNode.appendChild(iframe);
+						try {
+							win = iframe.contentWindow;
+							doc = win.document.open();
+						} catch (e) {
+							dom = document.domain;
+							iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
+							win = iframe.contentWindow;
+							doc = win.document.open();
+						}
+						if (dom) {
+							doc._boomrl = function () {
+								this.domain = dom;
+								bootstrap();
+							};
+							doc.write("<body onload='document._boomrl();'>");
+						} else {
+							win._boomrl = function () {
+								bootstrap();
+							};
+							if (win.addEventListener) {
+								win.addEventListener("load", win._boomrl, false);
+							} else if (win.attachEvent) {
+								win.attachEvent("onload", win._boomrl);
+							}
+						}
+						doc.close();
+					}
+					var link = document.createElement("link");
+					if (link.relList &&
+						typeof link.relList.supports === "function" &&
+						link.relList.supports("preload") &&
+						("as" in link)) {
+						window.BOOMR.snippetMethod = "p";
+						link.href = window.BOOMR.url;
+						link.rel = "preload";
+						link.as = "script";
+						link.addEventListener("load", promote);
+						link.addEventListener("error", function () {
+							iframeLoader(true);
+						});
+						setTimeout(function () {
+							if (!promoted) {
+								iframeLoader(true);
+							}
+						}, LOADER_TIMEOUT);
+						BOOMR_lstart = new Date().getTime();
+						parentNode.appendChild(link);
+					} else {
+						iframeLoader(false);
+					}
+					function boomerangSaveLoadTime(e) {
+						window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+					}
+					if (window.addEventListener) {
+						window.addEventListener("load", boomerangSaveLoadTime, false);
+					} else if (window.attachEvent) {
+						window.attachEvent("onload", boomerangSaveLoadTime);
+					}
+					if (document.addEventListener) {
+						document.addEventListener("onBoomerangLoaded", function (e) {
+							e.detail.BOOMR.init({
+								producer_url: "https://monorail-edge.shopifysvc.com/v1/produce",
+								ResourceTiming: {
+									enabled: true,
+									trackedResourceTypes: ["script", "img", "css"]
+								},
+							});
+							e.detail.BOOMR.t_end = new Date().getTime();
+						});
+					} else if (document.attachEvent) {
+						document.attachEvent("onpropertychange", function (e) {
+							if (!e) e = event;
+							if (e.propertyName === "onBoomerangLoaded") {
+								e.detail.BOOMR.init({
+									producer_url: "https://monorail-edge.shopifysvc.com/v1/produce",
+									ResourceTiming: {
+										enabled: true,
+										trackedResourceTypes: ["script", "img", "css"]
+									},
+								});
+								e.detail.BOOMR.t_end = new Date().getTime();
+							}
+						});
+					}
+				})();
+
+
+				window.ShopifyAnalytics.lib.page(null, { "pageType": "page", "resourceType": "page", "resourceId": 18650792025 }, "0f0b9d254efbaf97b2249bd6f60e422d5fc9acbef9b49f0648f4aa864d7f7197");
+
+				var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
+				var token = match ? match[1] : undefined;
+				if (!hasLoggedConversion(token)) {
+					setCookieIfConversion(token);
+
+				}
+			});
+
+
+			var eventsListenerScript = document.createElement('script');
+			eventsListenerScript.async = true;
+			eventsListenerScript.src = "//cdn.shopify.com/shopifycloud/shopify/assets/shop_events_listener-eb19870e6f215e4e4acd8067d24ecfcbfee2d96d96aa8607e8fd45edf40eacc6.js";
+			document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+
+		})();</script>
+	<script>!function (e) { e.addEventListener("DOMContentLoaded", function () { var t = ['form[action^="/contact"] input[name="form_type"][value="contact"]', 'form[action*="/comments"] input[name="form_type"][value="new_comment"]'].join(","); null !== e.querySelector(t) && (window.Shopify = window.Shopify || {}, window.Shopify.recaptchaV3 = window.Shopify.recaptchaV3 || { siteKey: "6LcCR2cUAAAAANS1Gpq_mDIJ2pQuJphsSQaUEuc9" }, (t = e.createElement("script")).setAttribute("src", "https://cdn.shopify.com/shopifycloud/storefront-recaptcha-v3/v0.4/index.js"), e.body.appendChild(t)) }) }(document);</script>
+	<script integrity="sha256-pVJhp6mHZ0dJmJmDtYierarGeV2NSFSPthRwqW7blSQ="
+		data-source-attribution="shopify.loadfeatures" defer="defer"
+		src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/load_feature-a55261a7a987674749989983b5889eadaac6795d8d48548fb61470a96edb9524.js"
+		crossorigin="anonymous"></script>
+	<script crossorigin="anonymous" defer="defer"
+		src="//cdn.shopify.com/shopifycloud/shopify/assets/shopify_pay/storefront-b61f50798075db890698930c4405673937fe89353f7fea7be88b5ce16a9c0af8.js?v=20210208"></script>
+	<script integrity="sha256-h+g5mYiIAULyxidxudjy/2wpCz/3Rd1CbrDf4NudHa4="
+		data-source-attribution="shopify.dynamic-checkout" defer="defer"
+		src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/features-87e8399988880142f2c62771b9d8f2ff6c290b3ff745dd426eb0dfe0db9d1dae.js"
+		crossorigin="anonymous"></script>
+
+
+	<style id="shopify-dynamic-checkout-cart">
+		@media screen and (min-width: 750px) {
+			#dynamic-checkout-cart {
+				min-height: 50px;
+			}
+		}
+
+		@media screen and (max-width: 750px) {
+			#dynamic-checkout-cart {
+				min-height: 240px;
+			}
+		}
+	</style>
+	<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+	<link rel="canonical" href="https://themes.materializecss.com/pages/admin-table-custom-elements">
+</head>
+
+<body class="has-fixed-sidenav">
+	<header>
+		<div class="navbar-fixed">
+			<nav class="navbar white">
+				<div class="nav-wrapper"><a href="#!" class="brand-logo grey-text text-darken-4">Table Custom
+						Elements</a>
+					<ul id="nav-mobile" class="right">
+						<li class="hide-on-med-and-down"><a href="/products/admin">Buy Now!</a></li>
+						<li class="hide-on-med-and-down"><a href="#!" data-target="dropdown1"
+								class="dropdown-trigger waves-effect"><i class="material-icons">notifications</i></a>
+						</li>
+						<li><a href="#!" data-target="chat-dropdown" class="dropdown-trigger waves-effect"><i
+									class="material-icons">settings</i></a></li>
+					</ul><a href="#!" data-target="sidenav-left" class="sidenav-trigger left"><i
+							class="material-icons black-text">menu</i></a>
+				</div>
+			</nav>
+		</div>
+		<ul id="sidenav-left" class="sidenav sidenav-fixed">
+			<li><a href="/pages/admin-dashboard" class="logo-container">Admin<i class="material-icons left">spa</i></a>
+			</li>
+			<li class="no-padding">
+				<ul class="collapsible collapsible-accordion">
+					<li class="bold waves-effect"><a class="collapsible-header">Pages<i
+								class="material-icons chevron">chevron_left</i></a>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="/pages/admin-dashboard" class="waves-effect">Dashboard<i
+											class="material-icons">web</i></a></li>
+								<li><a href="/pages/admin-fixed-chart" class="waves-effect">Fixed Chart<i
+											class="material-icons">list</i></a></li>
+								<li><a href="/pages/admin-grid" class="waves-effect">Grid<i
+											class="material-icons">dashboard</i></a></li>
+								<li><a href="/pages/admin-chat" class="waves-effect">Chat<i
+											class="material-icons">chat</i></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="bold waves-effect"><a class="collapsible-header">Charts<i
+								class="material-icons chevron">chevron_left</i></a>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="/pages/admin-line-charts" class="waves-effect">Line Charts<i
+											class="material-icons">show_chart</i></a></li>
+								<li><a href="/pages/admin-bar-charts" class="waves-effect">Bar Charts<i
+											class="material-icons">equalizer</i></a></li>
+								<li><a href="/pages/admin-area-charts" class="waves-effect">Area Charts<i
+											class="material-icons">multiline_chart</i></a></li>
+								<li><a href="/pages/admin-doughnut-charts" class="waves-effect">Doughnut Charts<i
+											class="material-icons">pie_chart</i></a></li>
+								<li><a href="/pages/admin-financial-charts" class="waves-effect">Financial Charts<i
+											class="material-icons">euro_symbol</i></a></li>
+								<li><a href="/pages/admin-interactive-charts" class="waves-effect">Interactive Charts<i
+											class="material-icons">touch_app</i></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="bold waves-effect active"><a class="collapsible-header">Tables<i
+								class="material-icons chevron">chevron_left</i></a>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="/pages/admin-fullscreen-table" class="waves-effect">Fullscreen with Chart<i
+											class="material-icons">show_chart</i></a></li>
+								<li><a href="/pages/admin-table-custom-elements" class="waves-effect active">Table with
+										Custom Elements<i class="material-icons">settings</i></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="bold waves-effect"><a class="collapsible-header">Calendar<i
+								class="material-icons chevron">chevron_left</i></a>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="/pages/admin-calendar" class="waves-effect">Calendar<i
+											class="material-icons">cloud</i></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="bold waves-effect"><a class="collapsible-header">Headers<i
+								class="material-icons chevron">chevron_left</i></a>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="/pages/admin-header-tabbed" class="waves-effect">Tabbed<i
+											class="material-icons">tab</i></a></li>
+								<li><a href="/pages/admin-header-metrics" class="waves-effect">Metrics<i
+											class="material-icons">web</i></a></li>
+								<li><a href="/pages/admin-header-search" class="waves-effect">Search<i
+											class="material-icons">search</i></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="bold waves-effect"><a class="collapsible-header">Account<i
+								class="material-icons chevron">chevron_left</i></a>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="/pages/admin-log-in" class="waves-effect">Log In<i
+											class="material-icons">person</i></a></li>
+								<li><a href="/pages/admin-settings" class="waves-effect">Settings<i
+											class="material-icons">settings</i></a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div id="dropdown1" class="dropdown-content notifications">
+			<div class="notifications-title">notifications</div>
+			<div class="card">
+				<div class="card-content"><span class="card-title">Joe Smith made a purchase</span>
+					<p>Content</p>
+				</div>
+				<div class="card-action"><a href="#!">view</a><a href="#!">dismiss</a></div>
+			</div>
+			<div class="card">
+				<div class="card-content"><span class="card-title">Daily Traffic Update</span>
+					<p>Content</p>
+				</div>
+				<div class="card-action"><a href="#!">view</a><a href="#!">dismiss</a></div>
+			</div>
+			<div class="card">
+				<div class="card-content"><span class="card-title">New User Joined</span>
+					<p>Content</p>
+				</div>
+				<div class="card-action"><a href="#!">view</a><a href="#!">dismiss</a></div>
+			</div>
+		</div>
+		<div id="chat-dropdown" class="dropdown-content dropdown-tabbed">
+			<ul class="tabs tabs-fixed-width">
+				<li class="tab col s3"><a href="#settings">Settings</a></li>
+				<li class="tab col s3"><a href="#friends" class="active">Friends</a></li>
+			</ul>
+			<div id="settings" class="col s12">
+				<div class="settings-group">
+					<div class="setting">Night Mode
+						<div class="switch right">
+							<label>
+								<input type="checkbox"><span class="lever"></span>
+							</label>
+						</div>
+					</div>
+					<div class="setting">Beta Testing
+						<label class="right">
+							<input type="checkbox"><span></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div id="friends" class="col s12">
+				<ul class="collection flush">
+					<li class="collection-item avatar">
+						<div class="badged-circle online"><img
+								src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/portrait1.jpg?v=1218798423999129079"
+								alt="avatar" class="circle"></div><span class="title">Jane Doe</span>
+						<p class="truncate">Lo-fi you probably haven't heard of them</p>
+					</li>
+					<li class="collection-item avatar">
+						<div class="badged-circle"><img
+								src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/portrait2.jpg?v=15342908036415923195"
+								alt="avatar" class="circle"></div><span class="title">John Chang</span>
+						<p class="truncate">etsy leggings raclette kickstarter four dollar toast</p>
+					</li>
+					<li class="collection-item avatar">
+						<div class="badged-circle"><img
+								src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/portrait3.jpg?v=4679613373594475586"
+								alt="avatar" class="circle"></div><span class="title">Lisa Simpson</span>
+						<p class="truncate">Raw denim fingerstache food truck chia health goth synth</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<main>
+		<!-- Tables -->
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<h2 class="section-title">Custom Table Elements</h2>
+
+					<div class="card">
+						<table id="table-custom-elements" class="row-border" cellspacing="0" width="100%">
+							<thead>
+								<tr>
+									<th><label><input class="filled-in select-all" name="select_all" value="1"
+												type="checkbox" /><span></span></label></th>
+									<th>Клиент</th>
+									<th>Проект</th>
+									<th>Статус</th>
+									<th>Age</th>
+									<th>Start date</th>
+									<th>Бюджет</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</main>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col s6 m3">
+					<img class="materialize-logo"
+						src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/materialize-logo.png?v=17909639059119771368"
+						alt="Materialize">
+					<p>Made with love by Materialize.</p>
+				</div>
+				<div class="col s6 m3">
+					<h5>About</h5>
+					<ul>
+						<li><a href="#!">Blog</a></li>
+						<li><a href="#!">Pricing</a></li>
+						<li><a href="#!">Docs</a></li>
+					</ul>
+				</div>
+				<div class="col s6 m3">
+					<h5>Connect</h5>
+					<ul>
+						<li><a href="#!">Community</a></li>
+						<li><a href="#!">Subscribe</a></li>
+						<li><a href="#!">Email</a></li>
+					</ul>
+				</div>
+				<div class="col s6 m3">
+					<h5>Contact</h5>
+					<ul>
+						<li><a href="#!">Twitter</a></li>
+						<li><a href="#!">Facebook</a></li>
+						<li><a href="#!">Github</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer><!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script>
+
+	<!-- External libraries -->
+
+	<!-- jqvmap -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script type="text/javascript"
+		src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.min.js?v=16312383892908448454"></script>
+	<script type="text/javascript"
+		src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.world.js?v=7251365059269487148"
+		charset="utf-8"></script>
+	<script type="text/javascript"
+		src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.sampledata.js?v=8702362987075556685"></script>
+
+	<!-- ChartJS -->
+
+	<script type="text/javascript"
+		src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.js?v=2884891905158527706"></script>
+	<script type="text/javascript"
+		src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.Financial.js?v=3464499164675255295"></script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+	<script
+		src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/imagesloaded.pkgd.min.js?v=5881977179676351054"></script>
+	<script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/masonry.pkgd.min.js?v=18031290468259756901"></script>
+
+
+	<!-- Initialization script -->
+	<script
+		src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/table-custom-elements.min.js?v=8344857946410998004"></script>
+</body>
+
+</html>
